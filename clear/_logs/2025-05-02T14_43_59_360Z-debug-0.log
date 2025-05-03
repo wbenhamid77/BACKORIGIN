@@ -1,0 +1,301 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\21260\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.1.0
+2 info using node@v20.17.0
+3 silly config load:file:C:\Users\21260\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Nouveau dossier\generateQuestionsApi\cv_api\.npmrc
+5 silly config load:file:C:\Users\21260\.npmrc
+6 silly config load:file:C:\Users\21260\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install react @types/react
+8 verbose argv "install" "react" "@types/react"
+9 verbose logfile logs-max:10 dir:C:\Nouveau dossier\generateQuestionsApi\cv_api\clear\_logs\2025-05-02T14_43_59_360Z-
+10 verbose logfile C:\Nouveau dossier\generateQuestionsApi\cv_api\clear\_logs\2025-05-02T14_43_59_360Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest react@*
+16 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/react 761ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+19 silly fetch manifest @types/react@*
+20 silly packumentCache full:https://registry.npmjs.org/@types%2freact cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/@types%2freact 269ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/@types%2freact set size:undefined disposed:false
+23 silly placeDep ROOT @types/react@19.1.2 OK for: cv-interview-api@1.0.0 want: *
+24 silly placeDep ROOT react@19.1.0 OK for: cv-interview-api@1.0.0 want: *
+25 silly fetch manifest csstype@^3.0.2
+26 silly packumentCache full:https://registry.npmjs.org/csstype cache-miss
+27 http fetch GET 200 https://registry.npmjs.org/csstype 100ms (cache miss)
+28 silly packumentCache full:https://registry.npmjs.org/csstype set size:undefined disposed:false
+29 silly placeDep ROOT csstype@3.1.3 OK for: @types/react@19.1.2 want: ^3.0.2
+30 silly reify moves {}
+31 silly audit bulk request {
+31 silly audit   '@google-cloud/common': [ '6.0.0' ],
+31 silly audit   '@google-cloud/projectify': [ '4.0.0' ],
+31 silly audit   '@google-cloud/promisify': [ '4.1.0' ],
+31 silly audit   '@google-cloud/speech': [ '7.0.1' ],
+31 silly audit   '@grpc/grpc-js': [ '1.13.3' ],
+31 silly audit   '@grpc/proto-loader': [ '0.7.15' ],
+31 silly audit   '@js-sdsl/ordered-map': [ '4.4.2' ],
+31 silly audit   '@protobufjs/aspromise': [ '1.1.2' ],
+31 silly audit   '@protobufjs/base64': [ '1.1.2' ],
+31 silly audit   '@protobufjs/codegen': [ '2.0.4' ],
+31 silly audit   '@protobufjs/eventemitter': [ '1.1.0' ],
+31 silly audit   '@protobufjs/fetch': [ '1.1.0' ],
+31 silly audit   '@protobufjs/float': [ '1.0.2' ],
+31 silly audit   '@protobufjs/inquire': [ '1.1.0' ],
+31 silly audit   '@protobufjs/path': [ '1.1.2' ],
+31 silly audit   '@protobufjs/pool': [ '1.1.0' ],
+31 silly audit   '@protobufjs/utf8': [ '1.1.0' ],
+31 silly audit   '@supabase/auth-js': [ '2.69.1' ],
+31 silly audit   '@supabase/functions-js': [ '2.4.4' ],
+31 silly audit   '@supabase/node-fetch': [ '2.6.15' ],
+31 silly audit   '@supabase/postgrest-js': [ '1.19.4' ],
+31 silly audit   '@supabase/realtime-js': [ '2.11.2' ],
+31 silly audit   '@supabase/storage-js': [ '2.7.1' ],
+31 silly audit   '@supabase/supabase-js': [ '2.49.4' ],
+31 silly audit   '@tootallnate/once': [ '2.0.0' ],
+31 silly audit   '@types/caseless': [ '0.12.5' ],
+31 silly audit   '@types/duplexify': [ '3.6.4' ],
+31 silly audit   '@types/long': [ '5.0.0' ],
+31 silly audit   '@types/node': [ '18.19.86' ],
+31 silly audit   '@types/node-fetch': [ '2.6.12' ],
+31 silly audit   '@types/phoenix': [ '1.6.6' ],
+31 silly audit   '@types/pumpify': [ '1.4.4' ],
+31 silly audit   '@types/request': [ '2.48.12' ],
+31 silly audit   'form-data': [ '2.5.3', '4.0.2' ],
+31 silly audit   '@types/tough-cookie': [ '4.0.5' ],
+31 silly audit   '@types/ws': [ '8.18.1' ],
+31 silly audit   'abort-controller': [ '3.0.0' ],
+31 silly audit   accepts: [ '1.3.8' ],
+31 silly audit   'agent-base': [ '7.1.3', '6.0.2' ],
+31 silly audit   agentkeepalive: [ '4.6.0' ],
+31 silly audit   'ansi-regex': [ '5.0.1' ],
+31 silly audit   'ansi-styles': [ '4.3.0' ],
+31 silly audit   anymatch: [ '3.1.3' ],
+31 silly audit   'append-field': [ '1.0.0' ],
+31 silly audit   'array-flatten': [ '1.1.1' ],
+31 silly audit   arrify: [ '2.0.1' ],
+31 silly audit   asynckit: [ '0.4.0' ],
+31 silly audit   'aws-ssl-profiles': [ '1.1.2' ],
+31 silly audit   axios: [ '1.8.4' ],
+31 silly audit   'balanced-match': [ '1.0.2' ],
+31 silly audit   'base64-js': [ '1.5.1' ],
+31 silly audit   'bignumber.js': [ '9.3.0' ],
+31 silly audit   'binary-extensions': [ '2.3.0' ],
+31 silly audit   'body-parser': [ '1.20.3' ],
+31 silly audit   'brace-expansion': [ '1.1.11' ],
+31 silly audit   braces: [ '3.0.3' ],
+31 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+31 silly audit   'buffer-from': [ '1.1.2' ],
+31 silly audit   busboy: [ '1.6.0' ],
+31 silly audit   bytes: [ '3.1.2' ],
+31 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+31 silly audit   'call-bound': [ '1.0.4' ],
+31 silly audit   chokidar: [ '3.6.0' ],
+31 silly audit   cliui: [ '8.0.1' ],
+31 silly audit   'color-convert': [ '2.0.1' ],
+31 silly audit   'color-name': [ '1.1.4' ],
+31 silly audit   'combined-stream': [ '1.0.8' ],
+31 silly audit   'concat-map': [ '0.0.1' ],
+31 silly audit   'concat-stream': [ '1.6.2' ],
+31 silly audit   'content-disposition': [ '0.5.4' ],
+31 silly audit   'content-type': [ '1.0.5' ],
+31 silly audit   cookie: [ '0.7.1' ],
+31 silly audit   'cookie-signature': [ '1.0.6' ],
+31 silly audit   'core-util-is': [ '1.0.3' ],
+31 silly audit   cors: [ '2.8.5' ],
+31 silly audit   'data-uri-to-buffer': [ '4.0.1' ],
+31 silly audit   debug: [ '2.6.9', '4.4.0', '3.2.7' ],
+31 silly audit   'delayed-stream': [ '1.0.0' ],
+31 silly audit   denque: [ '2.1.0' ],
+31 silly audit   depd: [ '2.0.0' ],
+31 silly audit   destroy: [ '1.2.0' ],
+31 silly audit   dotenv: [ '16.4.7' ],
+31 silly audit   'dunder-proto': [ '1.0.1' ],
+31 silly audit   duplexify: [ '4.1.3' ],
+31 silly audit   'readable-stream': [ '3.6.2', '2.3.8' ],
+31 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+31 silly audit   'ee-first': [ '1.1.1' ],
+31 silly audit   'emoji-regex': [ '8.0.0' ],
+31 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+31 silly audit   'end-of-stream': [ '1.4.4' ],
+31 silly audit   'es-define-property': [ '1.0.1' ],
+31 silly audit   'es-errors': [ '1.3.0' ],
+31 silly audit   'es-object-atoms': [ '1.1.1' ],
+31 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+31 silly audit   escalade: [ '3.2.0' ],
+31 silly audit   'escape-html': [ '1.0.3' ],
+31 silly audit   etag: [ '1.8.1' ],
+31 silly audit   'event-target-shim': [ '5.0.1' ],
+31 silly audit   express: [ '4.21.2' ],
+31 silly audit   extend: [ '3.0.2' ],
+31 silly audit   'fetch-blob': [ '3.2.0' ],
+31 silly audit   'web-streams-polyfill': [ '3.3.3', '4.0.0-beta.3' ],
+31 silly audit   'fill-range': [ '7.1.1' ],
+31 silly audit   finalhandler: [ '1.3.1' ],
+31 silly audit   'follow-redirects': [ '1.15.9' ],
+31 silly audit   'form-data-encoder': [ '1.7.2' ],
+31 silly audit   'formdata-node': [ '4.4.1' ],
+31 silly audit   'formdata-polyfill': [ '4.0.10' ],
+31 silly audit   forwarded: [ '0.2.0' ],
+31 silly audit   fresh: [ '0.5.2' ],
+31 silly audit   fsevents: [ '2.3.3' ],
+31 silly audit   'function-bind': [ '1.1.2' ],
+31 silly audit   gaxios: [ '7.0.0-rc.4' ],
+31 silly audit   'node-fetch': [ '3.3.2', '2.7.0' ],
+31 silly audit   'gcp-metadata': [ '7.0.0-rc.1' ],
+31 silly audit   'generate-function': [ '2.3.1' ],
+31 silly audit   'get-caller-file': [ '2.0.5' ],
+31 silly audit   'get-intrinsic': [ '1.3.0' ],
+31 silly audit   'get-proto': [ '1.0.1' ],
+31 silly audit   'glob-parent': [ '5.1.2' ],
+31 silly audit   'google-auth-library': [ '10.0.0-rc.1' ],
+31 silly audit   'google-gax': [ '5.0.1-rc.0' ],
+31 silly audit   'google-logging-utils': [ '1.1.1' ],
+31 silly audit   gopd: [ '1.2.0' ],
+31 silly audit   gtoken: [ '8.0.0-rc.1' ],
+31 silly audit   'has-flag': [ '3.0.0' ],
+31 silly audit   'has-symbols': [ '1.1.0' ],
+31 silly audit   'has-tostringtag': [ '1.0.2' ],
+31 silly audit   hasown: [ '2.0.2' ],
+31 silly audit   'html-entities': [ '2.6.0' ],
+31 silly audit   'http-errors': [ '2.0.0' ],
+31 silly audit   'http-proxy-agent': [ '5.0.0' ],
+31 silly audit   ms: [ '2.1.3', '2.0.0' ],
+31 silly audit   'https-proxy-agent': [ '7.0.6', '5.0.1' ],
+31 silly audit   'humanize-ms': [ '1.2.1' ],
+31 silly audit   'iconv-lite': [ '0.4.24', '0.6.3' ],
+31 silly audit   'ignore-by-default': [ '1.0.1' ],
+31 silly audit   inherits: [ '2.0.4' ],
+31 silly audit   'ipaddr.js': [ '1.9.1' ],
+31 silly audit   'is-binary-path': [ '2.1.0' ],
+31 silly audit   'is-extglob': [ '2.1.1' ],
+31 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+31 silly audit   'is-glob': [ '4.0.3' ],
+31 silly audit   'is-number': [ '7.0.0' ],
+31 silly audit   'is-property': [ '1.0.2' ],
+31 silly audit   isarray: [ '1.0.0' ],
+31 silly audit   'json-bigint': [ '1.0.0' ],
+31 silly audit   jwa: [ '2.0.0' ],
+31 silly audit   jws: [ '4.0.0' ],
+31 silly audit   'lodash.camelcase': [ '4.3.0' ],
+31 silly audit   long: [ '5.3.2' ],
+31 silly audit   'lru-cache': [ '7.18.3' ],
+31 silly audit   'lru.min': [ '1.1.2' ],
+31 silly audit   'math-intrinsics': [ '1.1.0' ],
+31 silly audit   'media-typer': [ '0.3.0' ],
+31 silly audit   'merge-descriptors': [ '1.0.3' ],
+31 silly audit   methods: [ '1.1.2' ],
+31 silly audit   mime: [ '1.6.0' ],
+31 silly audit   'mime-db': [ '1.52.0' ],
+31 silly audit   'mime-types': [ '2.1.35' ],
+31 silly audit   minimatch: [ '3.1.2' ],
+31 silly audit   minimist: [ '1.2.8' ],
+31 silly audit   mkdirp: [ '0.5.6' ],
+31 silly audit   multer: [ '1.4.5-lts.2' ],
+31 silly audit   mysql2: [ '3.14.1' ],
+31 silly audit   'named-placeholders': [ '1.1.3' ],
+31 silly audit   negotiator: [ '0.6.3' ],
+31 silly audit   'node-domexception': [ '1.0.0' ],
+31 silly audit   'node-ensure': [ '0.0.0' ],
+31 silly audit   nodemon: [ '3.1.9' ],
+31 silly audit   'normalize-path': [ '3.0.0' ],
+31 silly audit   'object-assign': [ '4.1.1' ],
+31 silly audit   'object-hash': [ '3.0.0' ],
+31 silly audit   'object-inspect': [ '1.13.4' ],
+31 silly audit   'on-finished': [ '2.4.1' ],
+31 silly audit   once: [ '1.4.0' ],
+31 silly audit   openai: [ '4.92.0' ],
+31 silly audit   parseurl: [ '1.3.3' ],
+31 silly audit   'path-to-regexp': [ '0.1.12' ],
+31 silly audit   'pdf-parse': [ '1.1.1' ],
+31 silly audit   picomatch: [ '2.3.1' ],
+31 silly audit   'process-nextick-args': [ '2.0.1' ],
+31 silly audit   'proto3-json-serializer': [ '3.0.0' ],
+31 silly audit   protobufjs: [ '7.5.0' ],
+31 silly audit   'proxy-addr': [ '2.0.7' ],
+31 silly audit   'proxy-from-env': [ '1.1.0' ],
+31 silly audit   'pstree.remy': [ '1.1.8' ],
+31 silly audit   pump: [ '3.0.2' ],
+31 silly audit   pumpify: [ '2.0.1' ],
+31 silly audit   qs: [ '6.13.0' ],
+31 silly audit   'range-parser': [ '1.2.1' ],
+31 silly audit   'raw-body': [ '2.5.2' ],
+31 silly audit   'safe-buffer': [ '5.1.2', '5.2.1' ],
+31 silly audit   readdirp: [ '3.6.0' ],
+31 silly audit   'require-directory': [ '2.1.1' ],
+31 silly audit   'retry-request': [ '8.0.0' ],
+31 silly audit   'safer-buffer': [ '2.1.2' ],
+31 silly audit   semver: [ '7.7.1' ],
+31 silly audit   send: [ '0.19.0' ],
+31 silly audit   'seq-queue': [ '0.0.5' ],
+31 silly audit   'serve-static': [ '1.16.2' ],
+31 silly audit   setprototypeof: [ '1.2.0' ],
+31 silly audit   'side-channel': [ '1.1.0' ],
+31 silly audit   'side-channel-list': [ '1.0.0' ],
+31 silly audit   'side-channel-map': [ '1.0.1' ],
+31 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+31 silly audit   'simple-update-notifier': [ '2.0.0' ],
+31 silly audit   sqlstring: [ '2.3.3' ],
+31 silly audit   statuses: [ '2.0.1' ],
+31 silly audit   'stream-events': [ '1.0.5' ],
+31 silly audit   'stream-shift': [ '1.0.3' ],
+31 silly audit   streamsearch: [ '1.1.0' ],
+31 silly audit   string_decoder: [ '1.1.1' ],
+31 silly audit   'string-width': [ '4.2.3' ],
+31 silly audit   'strip-ansi': [ '6.0.1' ],
+31 silly audit   stubs: [ '3.0.0' ],
+31 silly audit   'supports-color': [ '5.5.0' ],
+31 silly audit   'teeny-request': [ '10.1.0' ],
+31 silly audit   'to-regex-range': [ '5.0.1' ],
+31 silly audit   toidentifier: [ '1.0.1' ],
+31 silly audit   touch: [ '3.1.1' ],
+31 silly audit   tr46: [ '0.0.3' ],
+31 silly audit   'type-is': [ '1.6.18' ],
+31 silly audit   typedarray: [ '0.0.6' ],
+31 silly audit   undefsafe: [ '2.0.5' ],
+31 silly audit   'undici-types': [ '5.26.5' ],
+31 silly audit   unpipe: [ '1.0.0' ],
+31 silly audit   'util-deprecate': [ '1.0.2' ],
+31 silly audit   'utils-merge': [ '1.0.1' ],
+31 silly audit   uuid: [ '11.1.0' ],
+31 silly audit   vary: [ '1.1.2' ],
+31 silly audit   'webidl-conversions': [ '3.0.1' ],
+31 silly audit   'whatwg-url': [ '5.0.0' ],
+31 silly audit   'wrap-ansi': [ '7.0.0' ],
+31 silly audit   wrappy: [ '1.0.2' ],
+31 silly audit   ws: [ '8.18.1' ],
+31 silly audit   xtend: [ '4.0.2' ],
+31 silly audit   y18n: [ '5.0.8' ],
+31 silly audit   yargs: [ '17.7.2' ],
+31 silly audit   'yargs-parser': [ '21.1.1' ],
+31 silly audit   '@types/react': [ '19.1.2' ],
+31 silly audit   react: [ '19.1.0' ],
+31 silly audit   csstype: [ '3.1.3' ]
+31 silly audit }
+32 verbose reify failed optional dependency C:\Nouveau dossier\generateQuestionsApi\cv_api\node_modules\fsevents
+33 silly reify mark deleted [
+33 silly reify   'C:\\Nouveau dossier\\generateQuestionsApi\\cv_api\\node_modules\\fsevents'
+33 silly reify ]
+34 http cache @types/react@https://registry.npmjs.org/@types/react/-/react-19.1.2.tgz 0ms (cache hit)
+35 silly tarball no local data for @types/react@https://registry.npmjs.org/@types/react/-/react-19.1.2.tgz. Extracting by manifest.
+36 http cache react@https://registry.npmjs.org/react/-/react-19.1.0.tgz 0ms (cache hit)
+37 http cache csstype@https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz 0ms (cache hit)
+38 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-19.1.0.tgz. Extracting by manifest.
+39 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz. Extracting by manifest.
+40 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 292ms
+41 silly audit report {}
+42 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz 391ms (cache miss)
+43 http fetch GET 200 https://registry.npmjs.org/react/-/react-19.1.0.tgz 398ms (cache miss)
+44 http fetch GET 200 https://registry.npmjs.org/@types/react/-/react-19.1.2.tgz 480ms (cache miss)
+45 silly ADD node_modules/csstype
+46 silly ADD node_modules/react
+47 silly ADD node_modules/@types/react
+48 silly ADD
+49 verbose cwd C:\Nouveau dossier\generateQuestionsApi\cv_api
+50 verbose os Windows_NT 10.0.26100
+51 verbose node v20.17.0
+52 verbose npm  v11.1.0
+53 verbose exit 0
+54 info ok
