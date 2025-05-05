@@ -1,4 +1,7 @@
+const { createClient } = require('@supabase/supabase-js');
 const supabase = require('../config/supabase');
+const pool = require('../config/database');
+const { v4: uuidv4 } = require('uuid');
 
 // Récupérer toutes les interviews
 async function getAllInterviews(req, res) {
@@ -497,6 +500,65 @@ async function updateLastInterviewAttribute(req, res) {
   }
 }
 
+// Créer une nouvelle réponse vidéo (MySQL)
+async function createVideoAnswer(req, res) {
+  try {
+    const {
+      url,
+      transcription,
+      question_index,
+      interview_id,
+      question_id,
+      question_type,
+      question_text,
+      user_id
+    } = req.body;
+
+    // Validation des données requises
+    if (!url || !interview_id || !question_id || !question_type || !question_text || !user_id) {
+      return res.status(400).json({
+        error: 'Données manquantes',
+        details: 'Tous les champs requis doivent être fournis'
+      });
+    }
+
+    const id = uuidv4();
+    const now = new Date().toISOString().slice(0, 19).replace('T', ' ');
+
+    const sql = `
+      INSERT INTO video_answers (
+        id, user_id, url, transcription, question_index, timestamp, created_at, interview_id, question_id, question_type
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+    const values = [
+      id, user_id, url, transcription || null, question_index || null, now, now, interview_id, question_id, question_type || null
+    ];
+    await pool.execute(sql, values);
+
+    // Mettre à jour le nombre de questions complétées dans l'interview
+    await pool.execute(
+      'UPDATE interviews SET completed_questions = IFNULL(completed_questions,0) + 1 WHERE id = ?',
+      [interview_id]
+    );
+
+    res.status(201).json({
+      id,
+      user_id,
+      url,
+      transcription,
+      question_index,
+      timestamp: now,
+      created_at: now,
+      interview_id,
+      question_id,
+      question_type
+    });
+  } catch (error) {
+    console.error('Erreur lors de la création de la réponse vidéo:', error);
+    res.status(500).json({ error: 'Erreur lors de la création de la réponse vidéo', details: error.message });
+  }
+}
+
 module.exports = {
   getAllInterviews,
   getAllVideoAnswers,
@@ -507,5 +569,6 @@ module.exports = {
   getLastInterviewVideoAnswers,
   updateInterviewMonitoring,
   updateLastInterviewMonitoring,
-  updateLastInterviewAttribute
+  updateLastInterviewAttribute,
+  createVideoAnswer
 }; 

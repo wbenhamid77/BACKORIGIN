@@ -7,6 +7,8 @@ const fs = require('fs');
 const { generateQuestions } = require('./controllers/questionGenerator');
 const { getVideos, getVideoById, getInterviewVideos } = require('./controllers/videoController');
 const { saveResponse, getResponsesByQuestion, updateTranscription } = require('./controllers/responseController');
+const { createInterview } = require('./controllers/interviewController');
+const { uploadVideoToSupabase, upload: videoUpload } = require('./controllers/videoUploadController');
 const { 
   getAllInterviews,
   getAllVideoAnswers,
@@ -16,7 +18,8 @@ const {
   updateVideoAnswerTranscription,
   getLastInterviewVideoAnswers,
   updateInterviewMonitoring,
-  updateLastInterviewMonitoring
+  updateLastInterviewMonitoring,
+  createVideoAnswer
 } = require('./controllers/videoAnswerController');
 
 const app = express();
@@ -26,29 +29,18 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Configure multer for file upload
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    // Create uploads directory if it doesn't exist
-    if (!fs.existsSync('uploads')) {
-      fs.mkdirSync('uploads');
-    }
-    cb(null, 'uploads/')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname))
-  }
-});
-
+const storage = multer.memoryStorage();
 const upload = multer({ 
   storage: storage,
   limits: {
     fileSize: 50 * 1024 * 1024 // 50MB
   },
-  fileFilter: function (req, file, cb) {
-    if (file.mimetype !== 'application/pdf') {
-      return cb(new Error('Only PDF files are allowed!'), false);
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('video/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Seuls les fichiers vidéo sont autorisés'), false);
     }
-    cb(null, true);
   }
 });
 
@@ -123,6 +115,7 @@ app.get('/api/get-questions', (req, res) => {
 });
 
 // Routes pour les interviews
+app.post('/api/interviews', createInterview);
 app.get('/api/interviews', getAllInterviews);
 app.put('/api/interviews/last/monitoring', updateLastInterviewMonitoring);
 app.get('/api/interviews/last/video-answers', getLastInterviewVideoAnswers);
@@ -130,12 +123,14 @@ app.get('/api/interviews/:interviewId/video-answers', getVideoAnswersByInterview
 app.put('/api/interviews/:interviewId/monitoring', updateInterviewMonitoring);
 
 // Routes pour les réponses vidéo
+app.post('/api/video-answers/auth', createVideoAnswer);
 app.get('/api/video-answers', getAllVideoAnswers);
 app.get('/api/video-answers/:id', getVideoAnswerById);
-app.post('/api/video-answers', upload.single('video'), saveVideoAnswer);
+app.post('/api/video-answers', createVideoAnswer);
 app.put('/api/video-answers/:id/transcription', updateVideoAnswerTranscription);
 
 // Routes pour les vidéos
+app.post('/api/videos/upload', videoUpload.single('video'), uploadVideoToSupabase);
 app.get('/api/videos', getVideos);
 app.get('/api/videos/interview', getInterviewVideos);
 app.get('/api/videos/:id', getVideoById);

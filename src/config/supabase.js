@@ -13,6 +13,11 @@ const supabase = createClient(supabaseUrl, supabaseKey, {
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false
+  },
+  global: {
+    headers: {
+      'apikey': supabaseKey
+    }
   }
 });
 
